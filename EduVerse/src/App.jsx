@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-rou
 import Login from './component/Login'
 import Home from './component/Home'
 import Dashboard from './component/Dashboard'
+import Header3 from './component/Header3'
+import Dashboard2 from './component/Dasboard2'
 
 function App() {
 
@@ -15,14 +17,24 @@ function App() {
 
   return (
     <div>
+      {/* Eğer login sayfasında değilsek Header1 ve Navbar göster */}
       {location.pathname !== '/login' && <Header1 />}
-      <Header2 />
+
+
+      {location.pathname !== '/home' && <Header2 />}
+
+      {location.pathname === '/home' && <Header3 />}
+
+      {location.pathname !== '/login' && <Navbar />}
+
+      {location.pathname !== '/login' && location.pathname !== '/home' && <Dashboard />}
+
+      {location.pathname === '/home' && <Dashboard2 />}
+
       <Routes>
-        <Route path='/login' element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
       </Routes>
-      {location.pathname !== '/login' && <Navbar />}
-      {location.pathname !== '/login' && <Dashboard />}
     </div>
   )
 }

@@ -32,41 +32,43 @@ function Login() {
         <div>
             <div className="login-container">
                 <div className="login-image-container">
-                    <img src={login} alt="Login Illustration" />
+                    <img src={login} alt="Login Illustration" className='left-image' />
                 </div>
-            </div>
 
-            <div className="login-form-container">
-                <h2 className="login-title">Öğrenim yolculuğunuza devam etmek için oturum açın</h2>
-                <form className="login-form" onSubmit={handleLogin}>
-                    <input
-                        type="email"
-                        placeholder="E-posta"
-                        className="login-input"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    <input
-                        type="password"
-                        placeholder="Şifre"
-                        className="login-input"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                    <button type="submit" className="login-button">
-                        Oturum Aç
-                    </button>
-                </form>
-            </div>
 
-            {message && <div className="login-message">{message}</div>}
+                <div className="login-form-container">
+                    <h2 className="login-title">Öğrenim yolculuğunuza <br />devam etmek için oturum<br /> açın</h2>
+                    <form className="login-form" onSubmit={handleLogin}>
+                        <input
+                            type="email"
+                            placeholder="E-posta"
+                            className="login-input"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                        <input
+                            type="password"
+                            placeholder="Şifre"
+                            className="login-input"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <button type="submit" className="login-button">
+                            Oturum Aç
+                        </button>
+                    </form>
 
-            <div className="login-links">
-                <p>
-                    Hesabınız yok mu? <a href="#" className="login-link">Kaydol</a>
-                </p>
+
+                    {message && <div className="login-message">{message}</div>}
+
+                    <div className="login-links">
+                        <p>
+                            Hesabınız yok mu? <a href="#" className="login-link">Kaydol</a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     );

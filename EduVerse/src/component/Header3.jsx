@@ -8,7 +8,7 @@ import hearth from '../image/heart.png'
 import bell from '../image/bell.png'
 import { Link } from 'react-router-dom';
 
-function Header2() {
+function Header3() {
     return (
         <div>
             <div className='header2'>
@@ -29,12 +29,11 @@ function Header2() {
                 </div>
 
                 <div className='action-link'>
-                    <Link to='/login' className='link2'>Giriş Yap</Link>
-                    <Link to='signup' className='link2'>Kayıt Ol</Link>
+                    <button type='submit' className='profil-button'>PROFİLİM</button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Header2
+export default Header3
