@@ -1,0 +1,29 @@
+.menu-bar {
+    background-color: #1D568F;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+}
+
+.menu-item {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-item:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}

@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header-links {
+    display: flex;
+    gap: 20px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
