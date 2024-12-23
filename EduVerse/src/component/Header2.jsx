@@ -30,7 +30,7 @@ function Header2() {
 
                 <div className='action-link'>
                     <Link to='/login' className='link2'>Giriş Yap</Link>
-                    <Link to='signup' className='link2'>Kayıt Ol</Link>
+                    <Link to='/signup' className='link2'>Kayıt Ol</Link>
                 </div>
             </div>
         </div>

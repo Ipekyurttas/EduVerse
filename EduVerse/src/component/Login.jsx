@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import AuthService from '../rest/AuthService';
+import { useNavigate } from 'react-router-dom';
 import login from '../image/login.png';
 import '../css/Login.css';
-import { useNavigate } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
-
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
@@ -18,6 +17,13 @@ function Login() {
             const response = await AuthService.login(email, password);
 
             if (response.data.success) {
+                const userIdResponse = await AuthService.getLoggedInUserId();
+
+                if (userIdResponse.data) {
+                    console.log('User ID:', userIdResponse.data);
+                    localStorage.setItem('userId', userIdResponse.data);
+                }
+
                 navigate('/home');
             } else {
                 setMessage(response.data.message);
@@ -34,7 +40,6 @@ function Login() {
                 <div className="login-image-container">
                     <img src={login} alt="Login Illustration" className='left-image' />
                 </div>
-
 
                 <div className="login-form-container">
                     <h2 className="login-title">Öğrenim yolculuğunuza <br />devam etmek için oturum<br /> açın</h2>
@@ -60,12 +65,11 @@ function Login() {
                         </button>
                     </form>
 
-
                     {message && <div className="login-message">{message}</div>}
 
                     <div className="login-links">
                         <p>
-                            Hesabınız yok mu? <a href="#" className="login-link">Kaydol</a>
+                            Hesabınız yok mu? <a href="/signup" className="login-link">Kaydol</a>
                         </p>
                     </div>
                 </div>
@@ -75,3 +79,5 @@ function Login() {
 }
 
 export default Login;
+
+

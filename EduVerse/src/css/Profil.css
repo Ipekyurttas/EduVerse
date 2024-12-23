@@ -1,0 +1,106 @@
+/* Genel Stil Ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.profil-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Profil Kartı */
+.profil-card {
+    margin-top: -150px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(217, 217, 217, 36%);
+    width: 400px;
+    height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profil-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+}
+
+.profil-card h2 {
+    margin-bottom: 40px;
+    color: #1D568F;
+}
+
+.profil-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn.orange {
+    background-color: #ffa726;
+}
+
+.btn.red {
+    background-color: #e53935;
+}
+
+.btn.blue {
+    background-color: #0d47a1;
+    width: 70%;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profil-form {
+    border-radius: 10px;
+    padding: 30px;
+    width: 350px;
+    margin-top: -180px;
+    flex-direction: column;
+}
+
+.profil-form h3 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #000000;
+    font-size: 25px;
+}
+
+.profil-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profil-form input:focus {
+    border-color: #0d47a1;
+    outline: none;
+}
+
+.profil-form .btn {
+    display: flex;
+}

@@ -1,0 +1,80 @@
+.education-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.education-container h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: 000000;
+}
+
+.reasons-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgb(29, 86, 143, 50%);
+    border-radius: 8px;
+}
+
+.reason {
+    text-align: center;
+    width: 30%;
+}
+
+.reason img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.reason h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.reason p {
+    font-size: 14px;
+    color: #555;
+}
+
+.form-container {
+    margin-top: 40px;
+}
+
+.form-container h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.educator-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.educator-form input {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.educator-form button {
+    padding: 10px 25px;
+    background-color: #16426F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.educator-form button:hover {
+    background-color: #003bb5;
+}

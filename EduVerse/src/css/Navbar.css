@@ -21,6 +21,7 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .menu-item:hover {

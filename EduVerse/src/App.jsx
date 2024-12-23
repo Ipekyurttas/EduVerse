@@ -8,8 +8,15 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-rou
 import Login from './component/Login'
 import Home from './component/Home'
 import Dashboard from './component/Dashboard'
-import Header3 from './component/Header3'
-import Dashboard2 from './component/Dasboard2'
+import Signup from './component/Signup'
+import Profil from './component/Profil'
+import Education from './component/Education'
+import Course from './component/Course'
+import CoursePage from './component/CoursePage'
+import PaymentPage from './component/PaymentPage'
+import Learn from './component/Learn'
+import Certifica from './component/Certifica'
+
 
 function App() {
 
@@ -17,24 +24,22 @@ function App() {
 
   return (
     <div>
-      {/* Eğer login sayfasında değilsek Header1 ve Navbar göster */}
-      {location.pathname !== '/login' && <Header1 />}
-
-
-      {location.pathname !== '/home' && <Header2 />}
-
-      {location.pathname === '/home' && <Header3 />}
-
-      {location.pathname !== '/login' && <Navbar />}
-
-      {location.pathname !== '/login' && location.pathname !== '/home' && <Dashboard />}
-
-      {location.pathname === '/home' && <Dashboard2 />}
-
+      {location.pathname !== '/login' && location.pathname !== '/home' && location.pathname !== '/signup' && location.pathname !== '/profil' && location.pathname !== '/education' && location.pathname !== '/course' && location.pathname !== '/coursePage' && location.pathname !== '/payment' && location.pathname !== '/learn' && !location.pathname.startsWith('/certifica/') && <Header1 />}
+      {location.pathname !== '/home' && location.pathname !== '/profil' && location.pathname !== '/education' && location.pathname !== '/course' && location.pathname !== '/coursePage' && location.pathname !== '/payment' && location.pathname !== '/learn' && !location.pathname.startsWith('/certifica/') && <Header2 />}
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path='/login' element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path='/profil' element={<Profil />} />
+        <Route path='/education' element={<Education />} />
+        <Route path='/course' element={<Course />} />
+        <Route path='/coursePage' element={<CoursePage />} />
+        <Route path='/payment' element={<PaymentPage />} />
+        <Route path='/learn' element={<Learn />} />
+        <Route path="/certifica/:courseId" element={<Certifica />} />
       </Routes>
+      {location.pathname !== '/login' && location.pathname !== '/home' && location.pathname !== '/signup' && location.pathname !== '/profil' && location.pathname !== '/education' && location.pathname !== '/course' && location.pathname !== '/coursePage' && location.pathname !== '/payment' && location.pathname !== '/learn' && !location.pathname.startsWith('/certifica/') && <Navbar />}
+      {location.pathname !== '/login' && location.pathname !== '/home' && location.pathname !== '/signup' && location.pathname !== '/profil' && location.pathname !== '/education' && location.pathname !== '/course' && location.pathname !== '/coursePage' && location.pathname !== '/payment' && location.pathname !== '/learn' && !location.pathname.startsWith('/certifica/') && <Dashboard />}
     </div>
   )
 }

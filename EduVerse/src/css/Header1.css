@@ -17,11 +17,13 @@
 .header-links {
     display: flex;
     gap: 20px;
+    color: #000;
 }
 
 .link {
     text-decoration: none;
     font-size: 13px;
+    color: #000;
 }
 
 .link:hover {

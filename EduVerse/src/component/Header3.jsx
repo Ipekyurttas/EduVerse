@@ -6,9 +6,15 @@ import basket from '../image/basket.png'
 import search from '../image/search.png'
 import hearth from '../image/heart.png'
 import bell from '../image/bell.png'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 function Header3() {
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate('/profil');
+    };
+
     return (
         <div>
             <div className='header2'>
@@ -29,9 +35,10 @@ function Header3() {
                 </div>
 
                 <div className='action-link'>
-                    <button type='submit' className='profil-button'>PROFİLİM</button>
+                    <button type='submit' className='profil-button' onClick={handleButtonClick}>PROFİLİM</button>
                 </div>
             </div>
+            <div className='header3'></div>
         </div>
     )
 }

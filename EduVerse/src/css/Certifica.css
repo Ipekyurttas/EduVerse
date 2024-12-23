@@ -1,0 +1,35 @@
+.certifica-container {
+    padding: 20px;
+    background-color: #1D568F;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 850px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.certifica-container h2 {
+    color: white;
+}
+
+.certifica-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.certifica-details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.certifica-details strong {
+    color: #333;
+}
+
+.certifica-photo {
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+}
