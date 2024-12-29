@@ -3,6 +3,7 @@ import AuthService from '../rest/AuthService';
 import { useNavigate } from 'react-router-dom';
 import login from '../image/login.png';
 import '../css/Login.css';
+import Header2 from './Header2';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -36,6 +37,7 @@ function Login() {
 
     return (
         <div>
+            <Header2 />
             <div className="login-container">
                 <div className="login-image-container">
                     <img src={login} alt="Login Illustration" className='left-image' />

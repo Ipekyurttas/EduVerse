@@ -63,7 +63,7 @@ function Profil() {
             await LogoutService.logout();
             alert("Başarıyla çıkış yapıldı.");
             localStorage.removeItem('userId');
-            navigate('/app');
+            navigate('/');
         } catch (error) {
             console.error("Çıkış yapılırken bir hata oluştu.", error);
             alert("Çıkış yapılırken bir hata oluştu.");

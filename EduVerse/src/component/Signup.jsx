@@ -3,6 +3,7 @@ import SignupService from '../rest/SignupService';
 import signup from '../image/signup.png'
 import '../css/Signup.css'
 import { useNavigate } from 'react-router-dom';
+import Header2 from './Header2';
 
 function Signup() {
     const [firstName, setFirstName] = useState('');
@@ -38,6 +39,7 @@ function Signup() {
 
     return (
         <div>
+            <Header2 />
             <div className='signup-container'>
                 <div className='signup-left'>
                     <img src={signup} />
